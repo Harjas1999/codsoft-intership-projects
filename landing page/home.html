@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+    <title>HSB solutions landing page</title>
+</head>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .navbar-nav{
+       margin: auto ;
+       font-size: 16px;
+       font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
+    }
+    .nav-link
+    {
+        color:white;
+        font-size: 19px;
+        animation-name: animat;
+        animation-timing-function: ease-in;
+        animation-iteration-count:1;
+        animation-duration: 1.0s;
+      
+    
+    }    
+    .nav-link:hover{
+        color:#ddcd9c;
+        border-bottom: 1px solid #ddcd9c;
+    }
+    .nav-link:focus{
+        color:#ddcd9c;
+        border-bottom: 1px solid #ddcd9c;
+    }
+    #button{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        border:0px solid ;
+        border-radius:40px;
+        padding: 10px 20px 10px 20px;
+        background-color: #96834d;
+        color:white;
+        text-transform: capitalize;
+        font-weight: 500;
+        transition-property:transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        animation-name: animat;
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-duration: 1.5s;
+    }
+    #button:hover{
+       transform: scale(1.1);
+    }
+    #but_chg{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        border:0px solid ;
+        border-radius:40px;
+        padding: 10px 20px 10px 20px;
+        background-color: #96834d;
+        color:white;
+        text-transform: capitalize;
+        font-weight: 500;
+        transition-property:transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        animation-name: animat;
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-duration: 1.5s;
+        margin-left: 10%;
+    }
+    #but_chg:hover{
+       transform: scale(1.1);
+    }
+  
+    .background{
+        background-image: linear-gradient(to right,#000000d0, #171A1A);
+        border-bottom-right-radius: 50%;
+    }
+    #button2{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        border:0px solid ;
+        border-radius:40px;
+        padding: 10px 20px 10px 20px;
+        background-color: #a88e4860;
+        color:white;
+        font-weight: 500;
+        margin-left: 1%;
+        transition-property:transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        animation-name: animat;
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-duration: 1.5s;
+    }
+    #button2:hover{
+       transform: scale(1.1);
+    }
+    .mar_man{
+        padding-left: 25%; 
+        padding-top: 8%;
+        color: white;
+        animation-name: animat;
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-duration: 1.5s;
+        
+    }
+    .border_bottom{
+        border: 2px solid #a88e48ab;
+        width:5%;
+        
+    }
+    .border_bottom
+    {
+        margin:auto;
+    }
+    .bor{
+     background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition-property:background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    }
+    .bor:hover{
+        background-color: #96834d;
+    }
+    #size{
+    font-size: 55px; 
+    }
+    #img{
+        padding:10%;
+        animation-duration: 2.0s;
+        animation-name: moving;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    #pad_man{
+        margin-left: 10%;
+    }
+    #border{
+        border: 1px solid black;
+        transition-property: box-shadow;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        margin-top: 4%;
+        padding: 5%;
+    }
+  
+    
+    #border:hover{
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.325);
+        cursor: pointer;
+    }
+    #img_animat{
+        animation-name: animat;
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-duration: 1.5s;
+    }
+    .border2{
+        border-bottom: 1px solid black;
+        width:30%;
+        float: right;
+    }
+    #img_animat2{
+        transition-property: transform;
+        transition-duration: 1.0s;
+        transition-timing-function: ease;   
+        cursor: pointer; 
+    }
+    #img_animat2:hover{
+        transform: translateY(-10px);
+    }
+    #form{
+        width: 70%; 
+        border: none;
+        border-bottom: 1px solid black;
+        transition-property: width;
+        transition-duration: 0.9s;
+        transition-timing-function: ease;
+    }
+    #form:focus{
+        width: 80%;
+        border-bottom: 2px solid #96834d;
+        outline: none;
+    }
+    #img_sign{
+       
+        background-image: url(images/send2.png);
+        background-size: 30px;
+        background-repeat:no-repeat;
+        background-position: 10px 14px;
+        padding: 1% 7% 1% 7%;
+        border-radius: 40px;
+        transition-property: background-position;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        cursor:pointer;
+
+    }
+    #img_sign:hover{
+        background-position:340px 14px;
+    }
+    .bg_col{
+        background-color: #9e884d90;
+        padding: 10%;
+        position: relative;
+        z-index: -1;
+    }
+    #mar_man1{
+    margin-top: -20%;
+    }
+    
+    #border_1{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }
+    #border_1:hover{
+        transform: scale(1.1);
+    }
+    #card{
+        border:none;
+        transition-property: border;
+        transition-duration: 0.7s;
+        transition-timing-function: ease;
+    }
+    #card:hover{
+        border:1px solid #96834d;
+    }
+	#btn{
+			border:none;
+			padding:2%;
+			background-image:url(images/upload-button.png);
+			background-size:50px;
+			background-repeat: no-repeat;
+			background-position:13px 17px;
+			background-color: transparent;	
+			float: right;		
+			cursor: pointer;
+			position: sticky;
+			top:20%;
+            transform: rotate(0deg);
+		}
+
+
+
+    .animation{
+	opacity: 0;
+    transform: translateX(-400px);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.2s;
+}
+.display-animation{
+    opacity: 1;
+    transform: translateX(0px);
+}
+    
+        /* media queries */
+  
+    @keyframes animat { 
+        0%{
+            opacity: 0.1;
+            transform: translateY(-70px);
+
+        }
+     100%{
+            opacity: 1.0;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes moving {
+        from {
+            transform: translateY(-10px);
+
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+
+
+
+
+    @media screen and (max-width:992px)
+    {
+        #img_sign{
+        background-size: 30px;  
+        background-position: 8px 5px;
+        }
+        #img_sign:hover{  
+        background-position: 270px 5px;
+        }
+    }
+    @media screen and (max-width:767px) 
+    {
+        .mar_man
+        {
+            padding:0;
+            
+        }
+        .bor{
+            margin-top: 5%;
+        }
+        #img{
+            padding:4%;
+        }
+        #pad_man{
+            margin-left: 0;
+        }
+        #but_chg{
+            margin-left: 0;
+        }
+        #size{
+            font-size: 45px;
+        }
+        #mar_man2{
+            text-align: center;
+        }
+        .img_man{
+            margin-left:35%;
+        }
+        #mar_man1{
+            margin-top: -40%;
+        }
+        .bg_col{
+            padding: 24%;
+        }
+        .form{
+            margin-top: 7%;
+        }
+    }
+
+    @media screen and (max-width:510px){
+        
+        #img_sign{
+        background-size: 24px;  
+        background-position: 3px 5px;
+        }
+       
+    }
+    @media screen and (max-width:424px){
+        #button2
+        {
+            margin-left:27%;
+            margin-top: 1%;
+        }
+        #img_sign{
+        background-size: 24px;  
+        background-position: 3px 5px;
+        }
+       
+    }
+    @media screen and (max-width:368px)
+    {
+        #button2
+        {
+            margin-left:27%;
+            margin-top: 1%;
+        }
+        .img_man{
+            margin-left:30%;
+        }
+        #img_sign{
+        background-size: px;  
+        background-position: 3px 5px;
+        }
+    }
+
+    @media screen and (max-width:362px)
+    {
+        #button2
+        {
+            margin-left:27%;
+            margin-top: 1%;
+
+        }
+    }
+  
+   
+   
+
+</style>
+<body>
+
+
+ <!-- navbar  -->
+ <div class="background">
+ <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="images/logo (2).png" alt="" width="50%"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav" >
+        <a class="nav-link " aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#plans">Plans</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+      <input type="button"   onclick="dark()" style="padding-left:2%;padding-bottom: 0%;background-color: black;">
+			<input type="button"   onclick="light()" style="padding-left:2%;padding-bottom: 0%; background-color: white;">
+      <input type="button" value='hire me' id="button">
+    </div>
+  </div>
+</nav>
+
+<!-- main head -->
+<br/><br/><br/><br/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" >
+            <div class="mar_man">
+           <h1 id="size" >Creative IT Solutions To <br><span style="color: #96834d;">Grow </span> Your Business </h1>
+            <p style="font-size: 17px;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu Quisque aliquam posuere tortor, sit amet convallis nunc scelerisque in.</p>
+        </div>
+           
+           <a href="#services"> <input type="button" value="Our Services" id="button" style="margin-left: 25%;margin-top: 5%;" ></a>
+            <a href="#contact"><input type="button" value="Contact Us" id="button2"></a>
+            
+        </div>
+        <div class="col-md-6">
+            <img src="images/main.png" alt="" width="100%" style="padding-right: 5%;" id="img_animat">
+        </div>
+    </div>
+</div>
+<br><br><br>
+</div>
+
+<br><br><br><br>
+<!-- how it works -->
+<div id="work"></div>
+ <div class="container-fluid">
+    
+    <h1 align="center" class="color">How It Works</h1>
+    <div class="border_bottom"></div>
+    <br><br>
+    <h5 align="center" style="color: #171a1aa9;" class="color">Lorem, ipsum dolor sit amet consectetur adipisicing elit. perspiciatis modi laudantium<br/> libero vero facilis quisquam!</h5>
+
+
+    <br><br><br><br>
+
+    <!-- images -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bor">
+            <center><img src="images/research.png" alt="" width="50%"></center>
+            </div>
+            <br/>
+            <h4 align="center" class="color" >Research and Report</h4>
+            <h6 align="center" class="color" style="color: #171a1aa9;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+        </div>
+
+        <div class="col-md-4">
+            <div class="bor">
+                <center><img src="images/design.png" alt="" width="50%"></center>
+                </div>
+                <br/>
+                <h4 align="center" class="color">Design and Prototype</h4>
+                <h6 align="center" class="color" style="color: #171a1aa9;" > Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="bor">
+                <center><img src="images/development.png" alt="" width="50%" ></center>
+                </div>
+                <br/>
+                <h4 align="center"class="color">Development and Deliver</h4>
+                <h6 align="center" class="color" style="color: #171a1aa9;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+
+            </div>
+
+    </div>
+ </div>
+ <div id="btn" onclick="topFunction()">
+
+ </div>
+
+ <br><br><br><br>
+<!-- about us -->
+<div id="about"></div>
+
+<br><br><br>
+<div class="container">
+
+    <h1 align="center" class="color">About Us</h1>
+    <div class="border_bottom"></div>
+    <br><br>
+
+    <div class="row">
+        <div class="col-md-6" >
+            <img src="images/aboutus.png" alt="" width="100%" id="img"class="animation" >
+        </div>
+
+        <div class="col-md-6">
+            <h1 style="padding-top: 20%;" class="color">We complete every project with <br/><span style="color: #96834d;">extra </span> care.</h1>
+            <h5 style=" color: #171a1aa9;;" class="color">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, <br/> sit amet convallis nunc scelerisque in.
+                <br/><br/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, <br/> sit amet convallis nunc scelerisque in.
+            </h5>
+            <br/>
+
+            <input type="button" value="Read More" id="button">
+        </div>
+    </div>
+
+
+
+    <div class="row">
+    
+        <div class="col-md-6" >
+            <h1 style="padding-top: 10%; " id="pad_man"  class="color" >We complete every project with <span style="color: #96834d;">customers</span> need.</h1>
+            <h5 style=" color: #171a1aa9;" id="pad_man" class="color">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus,<br/> sit amet convallis nunc scelerisque in.
+                <br/><br/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus<br/> sit amet convallis nunc scelerisque in.
+            </h5>
+            <br/>
+
+            <input type="button" value="Read More" id="but_chg" >
+        </div>
+
+        <div class="col-md-6">
+            <img src="images/aboutus2.png" alt="" width="100%" id="img" class="animation" >
+        </div>
+    </div>
+
+</div>
+
+
+<br><br><br><br>
+
+
+
+
+
+
+<!-- services -->
+
+
+
+<div id="services"></div>
+<div class="container">
+    <h1 align="center" class="color" >Our Services</h1>
+    <div class="border_bottom"></div>
+    <br/><br/>
+    <h5 align="center" class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod<br/>
+         ut labore et dolore magna aliqua.</h5>
+    <br><br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div id="border" >
+               <center> <img src="images/coding.png" alt="" width="64px" ></center>
+                <h4 align="center" class="color">Web Development</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="border" >
+                <center> <img src="images/uxui (2).png" alt="" width="64px"  class="animation" ></center>
+                <h4 align="center" class="color">UX/UI Design</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="border" class="animation">
+                <center> <img src="images/shield.png" alt="" width="64px"  class="animation" ></center>
+                <h4 align="center" class="color">Web Security</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+    </div>
+
+
+
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div id="border" >
+               <center> <img src="images/analysis.png" alt="" width="64px" ></center>
+                <h4 align="center" class="color">Data Analytics</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="border" >
+                <center> <img src="images/full-stack.png" alt="" width="64px"   class="animation"></center>
+                <h4 align="center" class="color">Web design</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+
+        <div class="col-md-4" >
+            <div id="border">
+                <center> <img src="images/responsive.png" alt="" width="64px"  class="animation"></center>
+                <h4 align="center" class="color">Responsive Customisation</h4>
+                <h6 align="center" style="color: #171a1aa9;" class="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Praesentium ex laudantium velit consectetur.<br/> Cum quia neque et.</h6>
+            
+            </div>
+        </div>
+        </div>
+
+</div>
+
+
+<br/><br/><br/><br/><br/>
+<br/>
+
+
+
+<!-- our amazing features -->
+
+<div id="features"></div>
+<div class="container">
+    <h1 align="center" class="color">Amazing Features</h1>
+    <div class="border_bottom"></div>
+    <br/><br/>
+    <h5 align="center" class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod<br/>
+         ut labore et dolore magna aliqua.</h5>
+    
+         <br><br>
+
+<br/>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="images/amazingfeature.jpg" alt="" width="100%" id="img_animat2" class="animation">
+    </div>
+   
+
+   
+    <div class="col-md-6">
+        
+        <img src="images/amazingfeature2.jpg" alt="" width="100%" style="margin-top: 5%;">
+    </div>
+
+</div>
+</div>
+<br><br><br><br>
+<br><br><br>
+<br>
+<!-- our clients  -->
+
+<div class="bg_col"></div>
+<br/><br/>
+
+
+<div class="container" id="mar_man1">
+    <h1 align="center" class="color">What Clients Say</h1>
+    <div class="border_bottom"></div>
+    
+    <br/>
+    <div class="row">
+        <div class="col-md-4" >
+        <img src="images/client.png" alt="" width="100%" id="border_1" class="animation">
+        </div>
+
+        <div class="col-md-4">
+            <img src="images/client2.png" alt="" width="100%" id="border_1" class="animation">
+        </div>
+
+        <div class="col-md-4">
+            <img src="images/client3.png" alt="" width="100%" id="border_1" class="animation">
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br>
+
+
+
+
+<!--our prices  -->
+
+
+<br/>
+
+<div id="plans"></div>
+
+<br><br><br>
+<div class="container">
+    <h1 align="center" class="color">Our Pricing Plans</h1>
+    <div class="border_bottom"></div>
+    <br/>
+    <br/>
+    <div class="row"> 
+        <div class="col-md-4">
+           
+          <img src="images/plan.png" alt="" width="100%" id="card"  >  
+        
+        </div>
+
+        <div class="col-md-4">
+            
+            <img src="images/plan3.png" alt="" width="100%" id="card" >
+        
+        
+    </div>
+
+        <div class="col-md-4">
+            
+            <img src="images/plan2.png" alt="" width="100%" id="card" >
+      
+        </div>
+    </div>
+</div>
+
+
+
+
+<br><br><br><br><br/>
+<!-- contact us -->
+<div id="contact"></div>
+<div class="container">
+
+    <h1 align="center" class="color">Contact Us</h1>
+    <div class="border_bottom"></div>
+    <br/><br/>
+    <h5 align="center" class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod<br/>
+         ut labore et dolore magna aliqua.</h5>
+    
+         <br><br>
+
+    <div class="row">
+      <div class="col-md-4" >
+        <h2 id="mar_man2" class="color">Let's Work Together</h2S>
+        <br/><br/>
+              
+        
+        <h5 id="mar_man2" class="color"><span><img src="images/email.png" width="24px" alt=""></span> &nbsp;Codsoft@gmail.com</h5>
+        <br/>
+        <h5 id="mar_man2" class="color"><span><img src="images/telephone-call.png" width="24px" alt=""></span> &nbsp;+91-9999251393</h5>
+        <br/><br/>
+
+        <h3 id="mar_man2" class="color">Follow Us</h3>
+            <div class="img_man" >
+      <a href="https://www.facebook.com/" target="_black"><img src="images/facebook_black.png" alt="" width="40px" style="margin-right: 2%; cursor:pointer;" id="img_change1" onmouseover= change_img_fb() onmouseout= change_prev_fb() ></a>
+      <a href="https://www.instagram.com/" target="_black"> <img src="images/instagram_black.png" alt=""  width="40px" style="margin-right: 2%;cursor:pointer;" id="img_change2" onmouseover= change_img_insta() onmouseout= change_prev_insta()></a>
+        <a href="https://www.twitter.com/" target="_black"><img src="images/twitter_black.png" alt="" width="40px" style="margin-right: 2%; cursor:pointer;" id="img_change3" onmouseover= change_img_twit() onmouseout= change_prev_twit()></a>
+    </div>
+      <br/>
+
+
+
+      </div>
+
+      <div class="col-md-8">
+
+        <form>
+            
+            <center><input type="text" placeholder="Your Name" id="form" >
+            <br/><br/><br/>
+            <input type="phone" placeholder="9999251393" id="form" >
+            <br/><br/><br/>
+            <input type="email" placeholder="Youremail@gmail.com" id="form" >
+            <br/><br/><br/>
+            <textarea name=""   placeholder="Your Query"  id="form" ></textarea>
+        </center>
+        <center>
+            <br/>
+            <br/>
+        <input type="submit" name="" id="button" > 
+    </center>
+
+        </form>
+      </div>
+
+
+
+    </div>
+</div>
+
+
+
+<br><br><br><br>
+<!-- footer -->
+
+<div class="container-fluid " style="background-color: #171A1A;">
+    <div class="row">
+        <div class="col-md-12">
+ <br/>           <center><h5 style="color:white;">Sign up Our News Letter</h5>
+            <input type="text" placeholder="Sign Up Newsletter " id="img_sign">
+        </center></div>
+    <div class="col-md-12" style="background-color: #171A1A; color: white;margin-top: 5%;">
+  <center><h6>Copyright &#169 2023 HSB SOLUTIONS. All rights reserved.</h6></center>
+   <br/><br/>
+</div>
+</div>
+</div>
+
+
+
+<!-- jabvascript -->
+
+
+<script>
+	var btn = document.getElementById("btn")
+
+
+function topFunction() {
+
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function dark(){
+     document.body.style.background = "black";
+     document.querySelector("#img_change1").src = "images/facebook_dark.png";
+     document.querySelector("#img_change2").src = "images/instagram_dark.png";
+     document.querySelector("#img_change3").src = "images/twitter_dark.png";
+
+    
+   
+	
+    let color = document.querySelectorAll(".color");
+	 for (let index = 0; index <= color.length; index++) {
+		color[index].style.color = "white";	
+	 }
+
+    //  let form = document.querySelectorAll("#form") ;
+    //  for(let j = 0 ; j <= form.length; j++)
+    //  {
+    //     form[j].style.border= "none"; 
+    //     form[j].style.borderBottom= "1px solid white"; 
+    //     form[j].style.background= "black"; 
+    //     form[j].style.color= "white"; 
+
+    //  }
+     
+   
+    }
+
+	function light(){
+     document.body.style.background = "white";
+     document.querySelector("#img_change1").src = "images/facebook_black.png";
+     document.querySelector("#img_change2").src = "images/instagram_black.png";
+     document.querySelector("#img_change3").src = "images/twitter_black.png";
+	 let color = document.querySelectorAll(".color");
+	 for (let index = 0; index <= color.length; index++) {
+		color[index].style.color = "black";
+     }
+    }
+
+    const animation = document.querySelectorAll('.animation');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('display-animation')
+    }
+        else {
+            entry.target.classList.remove('display-animation')
+        }
+    
+})
+},
+{ threshold: 0.3
+});
+//
+for (let i = 0; i < animation.length; i++) {
+const elements = animation[i];
+
+observer.observe(elements);
+} 
+ 
+
+
+
+
+const img1 = document.getElementById("img_change1");
+const img2 = document.getElementById("img_change2");
+const img3 = document.getElementById("img_change3");
+// fb 
+function change_img_fb(){
+
+img1.src = "images/facebook.png";
+}
+
+function change_prev_fb(){
+
+img1.src = "images/facebook_black.png";
+}
+
+// instagram
+function change_img_insta(){
+
+img2.src = "images/instagram.png";
+}
+
+function change_prev_insta(){
+img2.src = "images/instagram_black.png";
+}
+
+// twitter
+function change_img_twit(){
+
+img3.src = "images/twitter.png";
+}
+
+function change_prev_twit(){
+img3.src = "images/twitter_black.png";
+}
+</script>
+</body>
+</html>
